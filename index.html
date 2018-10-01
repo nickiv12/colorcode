@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- РАСЦВЕЧЕННЫЙ КОД - УПРАВЛЕНИЕ
+ДЕЛАЮ ПРОБУ:
+	- Эффект печатной машинки для расцвеченного кода.
+-->
+	<head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name=viewport content="width=device-width, initial-scale=1">
+  	<title>Шаблон страницы.</title>
+	</head>
+
+	<body>
+		<!-- cc - означает colorcode  -->
+		<div id="cc_1">
+			Он сказал: <i>Я ухожу</i> и добавил: <i>До свидания</i>
+		</div>
+		<div id="cc_2">
+
+		</div>
+
+  	<script src="JSmain/jquery-3.3.1.min.js"></script>
+  	<script>
+  	  $(document).ready(function() {
+				var str = $('#cc_1').html();
+				var i = 0;
+				while (i < str.length)
+				{
+					var pos = str.indexOf('>', i);
+					if (pos == -1) break;
+					alert(pos);
+					i = pos+1;
+				}
+
+				/* КОД РАБОТАЕТ
+				alert(str);
+				var first = str.indexOf('>');
+				alert(first);
+				var second = str.indexOf('>', first+1);
+				alert(second);
+				*/
+			});
+		</script>
+	</body>
+</html>
